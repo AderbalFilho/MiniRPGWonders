@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import cn from 'classnames';
 
-export default function SocialMedia({ isModal, productionAssetPrefix }: { isModal?: boolean, productionAssetPrefix: string }) {
+export default function SocialMedia({ isModal, productionPrefix }: { isModal?: boolean, productionPrefix: string }) {
   const socialMediaLinks = [
     { label: 'Etsy', href: 'https://minirpgwonders.etsy.com' },
     { label: 'Instagram', href: 'https://www.instagram.com/minirpgwonders' }
@@ -13,7 +13,7 @@ export default function SocialMedia({ isModal, productionAssetPrefix }: { isModa
       {socialMediaLinks.map(socialMediaLink => 
         <Link href={socialMediaLink.href} target="_blank" key={socialMediaLink.label}>
           <Image
-            src={`${productionAssetPrefix}/social_media/${socialMediaLink.label.toLowerCase()}_logo.png`}
+            src={`${productionPrefix}/social_media/${socialMediaLink.label.toLowerCase()}_logo.png`}
             alt={`${socialMediaLink.label} logo`}
             title={socialMediaLink.label}
             width={40}

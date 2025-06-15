@@ -1,11 +1,11 @@
 import cn from 'classnames';
 
-export default function Navbar({ isModal }: { isModal?: boolean }) {
+export default function Navbar({ isModal, productionPrefix }: { isModal?: boolean, productionPrefix: string }) {
   const navLinks = [
-    { label: 'Home', href: '/' },
-    { label: 'Creators', href: '/' },
-    { label: 'Themes', href: '/' },
-    { label: 'About', href: '/' }
+    { label: 'Home', href: `${productionPrefix}/#` },
+    { label: 'Creators', href: `${productionPrefix}/#` },
+    { label: 'Themes', href: `${productionPrefix}/#` },
+    { label: 'About', href: `${productionPrefix}/#` }
   ]
 
   return (
