@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@font-face {
+  font-family: "AR Julian";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/ARJULIAN.ttf") format("ttf");
+}
 @import "tailwindcss";
 
 :root {
@@ -10,6 +18,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-ar-julian: "AR Julian";
+  --font-inter: "Inter";
 }
 
 @media (prefers-color-scheme: dark) {
