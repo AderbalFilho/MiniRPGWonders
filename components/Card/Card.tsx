@@ -4,13 +4,14 @@ import { ICard } from "@/interfaces/ICard";
 import Tag from "@/components/Tag/Tag";
 
 export default function Card({ card }: { card: ICard }) {
+  const productionPrefix = process.env.NODE_ENV === 'production' ? '/MiniRPGWonders/' : '';
 
   return (
     <div className="rounded-lg w-[300px] bg-gray-700 shadow-lg shadow-neutral-200/20">
       <h4 className="p-4 w-full border-b-1 border-gray-900 truncate text-xl text-center" title={card.creator}>{card.creator}</h4>
       <div className="w-full">
         <Image
-          src={card.imgSrc}
+          src={`${productionPrefix}${card.imgSrc}`}
           alt={card.imgAlt || `${card.creator} model`}
           width={300}
           height={300}
