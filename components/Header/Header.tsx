@@ -26,14 +26,14 @@ export default function Header() {
       <SocialMedia productionPrefix={productionPrefix} />
 
       <button onClick={() => setIsOpen(true)} className="flex absolute items-center right-4 top-6 lg:hidden">
-        <Bars3Icon className="size-8 text-black" />
+        <Bars3Icon className="size-8 text-neutral-950" />
       </button>
 
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
         <div className="fixed inset-0 flex w-screen h-screen items-center justify-center bg-yellow-200">
           <DialogPanel className="max-w-lg space-y-4 p-12">
             <button className="absolute top-6 right-6" onClick={() => setIsOpen(false)}>
-              <XMarkIcon className="size-8 text-black" />
+              <XMarkIcon className="size-8 text-neutral-950" />
             </button>
             <Navbar isModal={true} productionPrefix={productionPrefix} />
             <div className="absolute bottom-0 left-0 w-full border-t-1 border-t-yellow-400/70 justify-center items-center px-4 py-6">
